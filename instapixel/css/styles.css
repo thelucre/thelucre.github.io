@@ -1,0 +1,299 @@
+/* FONTS */
+@font-face {
+  font-family: 'Mono Social Icons Font';
+  src: url("../font/MonoSocialIconsFont-1.10.eot");
+  src: url("../font/MonoSocialIconsFont-1.10.eot?#iefix") format("embedded-opentype"), url("../font/MonoSocialIconsFont-1.10.woff") format("woff"), url("../font/MonoSocialIconsFont-1.10.ttf") format("truetype"), url("../font/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont") format("svg");
+  src: url("../font/MonoSocialIconsFont-1.10.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.symbol, a.symbol:before {
+  font-family: 'Mono Social Icons Font';
+  font-size: 50px;
+  color: #666;
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+a.symbol:hover {
+  text-decoration: none; }
+
+a.symbol:before {
+  content: attr(title);
+  margin-right: 0.3em;
+  font-size: 130%; }
+
+/* Global Styles */
+html, body {
+  height: 100%; }
+
+body {
+  padding-top: 50px;
+  /* body padding for fixed top nav */ }
+
+.img-home-portfolio,
+.img-customer,
+.portfolio-item {
+  margin-bottom: 30px; }
+
+.navbar {
+  margin: 0px;
+  padding: 0px; }
+
+.tab-pane {
+  margin-top: 15px; }
+
+/* Page Sections */
+.section,
+.section-colored {
+  padding: 50px 0; }
+
+.section-colored {
+  background-color: #e1e1e1;
+  /* change this to change the background color of a colored section */ }
+
+.sidebar {
+  margin-top: 40px; }
+
+.sidebar ul {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #cccccc; }
+
+/* Half Page Height Carousel Customization */
+.carousel {
+  height: 65%; }
+
+.item,
+.active,
+.carousel-inner {
+  height: 100%; }
+
+.fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover; }
+
+/* Social Icons Styles */
+.list-social-icons {
+  margin-bottom: 45px; }
+
+.tooltip-social a {
+  text-decoration: none;
+  color: inherit; }
+
+.facebook-link a:hover {
+  color: #3b5998; }
+
+.linkedin-link a:hover {
+  color: #007fb1; }
+
+.twitter-link a:hover {
+  color: #39a9e0; }
+
+.google-plus-link a:hover {
+  color: #d14836; }
+
+/* Service Page Styles */
+.service-icon {
+  font-size: 50px; }
+
+/* 404 Page Styles */
+.error-404 {
+  font-size: 8em; }
+
+/* Pricing Page Styles */
+.price {
+  font-size: 4em; }
+
+.price-cents {
+  vertical-align: super;
+  font-size: 50%; }
+
+.price-month {
+  font-size: 35%;
+  font-style: italic; }
+
+/* Footer Styles */
+footer {
+  margin: 50px 0; }
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .carousel-caption {
+    padding-bottom: 10%; }
+
+  .carousel {
+    height: 70%;
+    /* increases the carousel height so it looks good on phones */ }
+
+  .img-responsive {
+    max-width: 100%;
+    display: inline; } }
+@media screen and (min-width: 768px) {
+  .carousel-caption {
+    padding-bottom: 10%; }
+
+  .img-responsive {
+    width: 600px;
+    display: inline; } }
+body {
+  color: #677f9f;
+  background-color: #fefffe;
+  font-family: 'Roboto Slab', serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #526681;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700; }
+
+p {
+  font-size: 16px; }
+
+h1.main-logo {
+  text-shadow: 0 0 10px #344152;
+  font-weight: 400;
+  color: #fefffe;
+  font-size: 150px; }
+  h1.main-logo span.insta {
+    font-weight: 400;
+    font-family: 'Engagement', sans-serif; }
+
+@media (max-width: 500px) {
+  h1.main-logo {
+    font-size: 60px; } }
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  h1.main-logo {
+    font-size: 100px; } }
+.navbar-inverse {
+  background-color: #fefffe;
+  border-color: #d4dbe4;
+  font-weight: 700; }
+  .navbar-inverse .navbar-brand {
+    color: #788f9d;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    .navbar-inverse .navbar-brand:hover {
+      color: #ca9c81; }
+    .navbar-inverse .navbar-brand .subtitle {
+      color: #b3c0c8;
+      font-weight: 400; }
+
+.navbar-inverse .navbar-nav > li > a {
+  font-weight: 400;
+  color: #788f9d; }
+  .navbar-inverse .navbar-nav > li > a:hover {
+    color: #344152;
+    background-color: #eef1f3; }
+
+.navbar-toggle {
+  background-color: #788f9d;
+  border-color: #a4b4bd;
+  color: #344152; }
+  .navbar-toggle:hover {
+    color: #344152; }
+
+a {
+  color: #c28e6f;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  a:hover {
+    text-decoration: none;
+    color: #6b442d; }
+
+.section-colored {
+  background-color: #788f9d; }
+  .section-colored em {
+    color: white; }
+  .section-colored h1, .section-colored h2, .section-colored h3, .section-colored h4, .section-colored h5 {
+    color: #fbfef4; }
+
+pre {
+  background-color: #faf6f4;
+  color: #8e9d90;
+  border-color: #b3c0c8; }
+
+em {
+  color: #5f7583; }
+
+@media screen and (max-width: 480px) {
+  table tbody tr th {
+    font-size: 10px; }
+  table tbody tr td {
+    font-size: 8pt;
+    padding: 5px; } }
+th {
+  color: #ca9c81; }
+
+.twitter-link {
+  color: #788f9d;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .twitter-link:hover {
+    color: #4a5b65; }
+
+.instagram-link {
+  color: #977575;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .instagram-link:hover {
+    color: #5f4747; }
+
+.github-link {
+  color: #735f79;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .github-link:hover {
+    color: #3d3240; }
+
+.linkedin-link {
+  color: #5c7290;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .linkedin-link:hover {
+    color: #202833; }
+
+footer {
+  margin-top: 10px; }
+  footer p {
+    text-align: center; }
+
+.footer-madeby {
+  margin-left: 15px; }
+
+.section {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 15px; }
+
+.xcarousel-caption {
+  width: 800px;
+  height: 200px;
+  position: absolute;
+  left: 0; }

@@ -1,0 +1,207 @@
+// COLORS
+
+$blue: #788f9d;
+$orange: #ca9c81;
+$yellow: #faf6c3;
+$mint: #f5fde6;
+$navy: #344152;
+$red: #977575;
+$peach: #e1c9a1;
+$green: #a9b5ab;
+$purple: #735f79;
+
+$primary: 	$blue;
+$secondary:	$orange;
+$dark: 		$navy;
+$light:		$mint;
+
+// LAYOUT
+$maxWidth: 700px; 
+
+// MIXINS
+@mixin transition($duration) {
+    -webkit-transition: $duration;
+    -moz-transition: $duration;
+    -ms-transition: $duration;
+    -o-transition: $duration;
+    transition: $duration;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+	-webkit-box-shadow:$top $left $blur $color #{$inset};
+	-moz-box-shadow:$top $left $blur $color #{$inset};
+	box-shadow:$top $left $blur $color #{$inset};
+}
+
+@import 'modern-business';
+
+body { 
+	color: lighten($dark, 25%); 
+	background-color: lighten($light, 5%);
+	font-family: 'Roboto Slab', serif;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	color: lighten($dark, 15%);
+	font-family: 'Roboto Slab', serif; 
+	font-weight: 700; 
+}
+
+p {
+	font-size: 16px;
+}
+
+h1.main-logo {
+	text-shadow: 0 0 10px $dark;
+	font-weight:400; 
+	color: lighten( $light, 5% );
+	font-size:150px;
+
+	span.insta {
+		font-weight:400;
+		font-family: 'Engagement', sans-serif;
+	}
+}
+
+@media (max-width: 500px) {
+	h1.main-logo {
+		font-size:60px;
+	}
+}
+
+@media screen and (min-width: 501px) and (max-width:900px) {
+	h1.main-logo {
+		font-size:100px;
+	}
+}
+
+
+.navbar-inverse {
+	background-color: lighten($light, 5%);
+	border-color: lighten($dark, 60%);
+	font-weight: 700; 
+
+	.navbar-brand {
+		color: $primary;
+
+		@include transition( 0.5s );
+		
+		&:hover {
+			color: $secondary;
+		}
+		.subtitle {
+			color: lighten($primary, 20%);
+			font-weight: 400; 
+		}
+	}
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	font-weight: 400;
+	color: $primary;
+
+	&:hover {
+		color: $dark;
+		background-color: lighten($primary, 40%);
+	}
+}
+
+.navbar-toggle {
+	background-color: $primary;
+	border-color: lighten($primary, 15%);
+	color: $navy;
+
+	&:hover {
+		color: $navy;
+	}
+}
+
+table {
+	//max-width: $maxWidth;
+}
+
+a {
+	color: darken($secondary,5%);
+	@include transition( 0.5s );
+
+	&:hover {
+		text-decoration: none;
+		color: darken($secondary, 35%);
+	}
+}
+
+.section-colored {
+	background-color: $primary;
+	em {
+		color: lighten($light, 6%);
+	}
+
+	h1, h2, h3, h4, h5 { 
+		color: lighten($light, 3%);
+	}
+}
+
+pre {
+	background-color: lighten($secondary, 32%);
+	color: darken($green, 10%);
+	border-color: lighten($primary, 20%);
+	//max-width: $maxWidth;
+}
+
+em {
+	color: darken($primary, 10%);
+}
+
+@media screen and (max-width:480px){
+   	table tbody tr {
+   		th {
+   			font-size: 10px;
+   		}
+
+		td {
+	    	font-size:8pt; 
+	    	padding:5px;
+	   	}
+	}
+}
+
+th {
+	color:$secondary;
+}
+
+.twitter-link {	color: $blue; @include transition(0.5s); &:hover { color: darken($blue, 20%); } }
+.instagram-link { color: $red; @include transition(0.5s); &:hover { color: darken($red, 20%); } }
+.github-link { color: $purple; @include transition(0.5s); &:hover { color: darken($purple, 20%); } }
+.linkedin-link { color: lighten($navy, 20%); @include transition(0.5s); &:hover { color: darken($navy, 10%); } }
+
+footer {
+	margin-top: 10px;
+
+	p {
+		text-align: center;
+	}
+}
+
+.footer-madeby {
+	margin-left:15px;
+}
+
+.section {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	padding-top:15px;
+}
+
+.xcarousel-caption {
+	width:800px;
+	height: 200px;
+	position:absolute;
+	left:0;
+}
+
+
+
+
+
+
+

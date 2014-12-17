@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InstaPIXEL // jQuery Plugin to pixelate HTML5 Canvas Elements - for ye, of 8-bit persuasion">
+    <meta name="author" content="Eric Howard / The Lucre">
+
+    <!-- facebook og -->
+    <meta property="og:title" content="InstaPIXEL jQuery Plugin" /> 
+    <meta property="og:image" content="http://www.instapixel.org/img/instapixel-jquery-social-image.png" /> 
+    <meta property="og:description" content="HTML5 Canvas Pixel Plugin for jQuery :: automatically pixelate an image to any HTML5 canvas element - for ye, of 8-bit persuasion" /> 
+    <meta property="og:url" content="http://www.instapixel.org">
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@thelucre">
+    <meta name="twitter:title" content="InstaPIXEL jQuery Plugin">
+    <meta name="twitter:description" content="HTML5 Canvas Pixel Plugin for jQuery :: automatically pixelate an image to any HTML5 canvas element - for ye, of 8-bit persuasion">
+    <meta name="twitter:creator" content="@thelucre">
+    <meta name="twitter:image:src" content="http://www.instapixel.org/img/instapixel-jquery-social-image.png">
+    <meta name="twitter:domain" content="instapixel.org">
+
+    <title>InstaPIXEL // jQuery Plugin to pixelate HTML5 Canvas Elements - for ye, of 8-bit persuasion</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"> <!-- mobile size nav toggle -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="index.html">InstaPIXEL <span class="subtitle">jQuery Plugin</span></a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a target="_blank" class="navigation-link" href="https://raw.github.com/thelucre/instapixel/master/jquery.instapixel.js">Download</a></li>
+            <li><a href="#documentation">Documentation</a></li>
+            <li><a href="https://github.com/thelucre/instapixel" target="_blank">View on GitHub</a></li>
+          </ul>
+        </div>
+      </div><!-- /.container -->
+    </nav>
+    
+    <div id="myCarousel" class="carousel slide">
+      <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <input id="sizeRange" type="range" min="6" max="50" value="20" style="width:70%"/>
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="item active">
+            <canvas id="canvas"> </canvas>
+            <div class="carousel-caption">
+              <h1 class="main-logo"><span class="insta">Insta</span>PIXEL</h1>
+            </div>
+          </div>
+        </div>
+        <!-- a couple social buttons, for the kids -->
+        <div style="position:absolute;right: 15px; top: 15px;">
+          <div style="margin-top:14px; margin-top:4px;"><a href="https://twitter.com/share" class="twitter-share-button" data-related="thelucre:The Lucre" data-lang="en" data-count="none" data-text="For ye, of #8bit persuasion : #InstaPIXEL by @thelucre, a #jQuery Plugin to pixelate #HTML5 Canvas Elements">Tweet</a></div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  <div class="fb-share-button" data-href="http://www.instapixel.org" data-type="button" style="margin-top:4px; margin-top:4px;"></div>
+        </div>
+    </div>
+
+    <div class="section">
+
+    <!-- above the fold columns -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <h3><i class="fa fa-th"></i> What's It For?</h3>
+            <p>InstaPIXEL is a jQuery plugin that will pixelate an image to an HTML5 canvas element at a given size. Maybe use it to generate <strong><em>high-res abstract art</em></strong>, or what about a <strong><em>resolution-neutral design element</em></strong> or perhaps as a tool to create <strong><em>baseline 2D art assets</em></strong>  for 8-bit style games. Your call, friend!</p>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <h3><i class="fa fa-download"></i> Download InstaPIXEL</h3>
+            <p>Grab the single <a href="https://raw.github.com/thelucre/instapixel/master/jquery.instapixel.js">jquery.instapixel.js</a> file and get going! Here, this should get you started: </p>
+            <p><pre>
+$('#myCanvas').instapixel({ 
+  'imgURL' : 'fooBar.png' 
+});</pre></p>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <h3><i class="fa fa-briefcase"></i> InstaPIXEL on GitHub</h3>
+            <p>Please View, Fork, or Star the source on <a href="https://github.com/thelucre/instapixel">GitHub</a> if you feel so compelled. Feel free to report issues, bugfixes, or feature requests, <a href="https://github.com/thelucre/instapixel/issues">too</a>. And share your designs with the rest of us on Twitter using <a href="http://www.twitter.com/theLucre">@theLucre</a> or <a href="https://twitter.com/search?q=%23instapixel">#instapixel</a></p>
+          </div>
+        </div><!-- /.row -->
+
+      </div><!-- /.container -->
+
+    </div><!-- /.section -->
+    <br/><a name="documentation"> </a>
+    <div class="section-colored text-center">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 id="instapixel-jquery-plugin">Documentation </h1>
+
+            <em>For ye, of 8-bit persuasion</em>
+          </div>
+        </div><!-- /.row -->
+
+      </div><!-- /.container -->
+
+    </div><!-- /.section-colored -->
+
+    <div class="section">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="se-section-delimiter"></div><div class="se-section-delimiter"></div>
+
+            <h2 id="basic-usage">Basic Usage</h2>
+
+            <p>This plugin will pixelate the attached canvas with any image. Simply call the plugin function from your canvas element and send an image URL as a parameter:</p>
+
+<pre><code>$('#mycanvas').instapixel({ 
+  'imgURL': 'foobar.jpg' 
+});</code></pre>
+
+            <p>The plugin is stateful, so you only need to call it once. After the initial call, use the data attribute to interact with the plugin:</p>
+
+            <pre><code>$('#mycanvas').data('instapixel').redraw();
+            </code></pre>
+
+            <p>One awesome feature is hi-res output. You can have your very own 8-bit abstract art at 12” wide x 300dpi using:</p>
+
+            <pre><code>var myDataURL = $('#mycanvas').data('instapixel').output( 12 ); 
+            </code></pre>
+
+            <p>Perhaps you should hide the loader when the processing is complete (the big images can take a bit…)</p>
+
+<pre><code>$('#mycanvas').on("hiResProcessed", function() {
+  $('#loader').fadeOut();
+});</code></pre>
+
+            <h2 id="options">Options</h2>
+
+            <table class="table table-striped">
+              <tbody><tr>
+                <th>Name</th><th>Values</th><th>Default</th><th>Description</th>
+              </tr>
+              <tr>
+                <td>imgURL</td>
+                <td>any image url string</td>
+                <td>‘.jpg’</td>
+                <td>The image to be loaded and pixelated onto the canvas</td>
+              </tr>
+              <tr>
+                <td>debug</td>
+                <td>true / false</td>
+                <td>true</td>
+                <td>Debug mode will output all these great messages to the console</td>
+              </tr>
+              <tr>
+                <td>pixelSize</td>
+                <td>any integer &gt; 0</td>
+                <td>10</td>
+                <td>The pixelation size drawn, relative to the original image size</td>
+              </tr>
+              <tr>
+                <td>resizeCanvas</td>
+                <td>true / false</td>
+                <td>false</td>
+                <td>If true, the canvas element will resize to the original image dimensions</td>
+              </tr>
+              <tr>
+                <td>trueSquare</td>
+                <td>true / false</td>
+                <td>false</td>
+                <td>If true, square pixels will be padded to fit the canvas just right</td>
+              </tr>
+            </tbody></table>
+
+            <h2 id="methods">Methods</h2>
+
+            <table class="table table-striped">
+              <tbody><tr>
+                <th>Name</th><th>Signature</th><th>Return Value</th><th>Description</th>
+              </tr>
+              <tr>
+                <td>setSize</td>
+                <td>( int size )</td>
+                <td>bool for success/fail</td>
+                <td>set pixel size to draw. does not redraw</td>
+              </tr>
+              <tr>
+                <td>getSize</td>
+                <td>none</td>
+                <td>int size</td>
+                <td>gets the current pixel size being drawn</td>
+              </tr>
+              <tr>
+                <td>setImage</td>
+                <td>( str url, [bool redraw] )</td>
+                <td> none </td>
+                <td>set the image to pixelate. pass true to redraw after async image load</td>
+              </tr>
+              <tr>
+                <td>getImage</td>
+                <td>none</td>
+                <td>str url</td>
+                <td>returns the currently drawn image</td>
+              </tr>
+              <tr>
+                <td>redraw</td>
+                <td>( [int size] )</td>
+                <td>bool for success/fail</td>
+                <td>redraw the pixelated canvas. optional size setting parameter</td>
+              </tr>
+              <tr>
+                <td>clear</td>
+                <td>none</td>
+                <td>none</td>
+                <td>clears the parent canvas element</td>
+              </tr>
+              <tr>
+                <td>output</td>
+                <td>( float inches )</td>
+                <td>dataURL of canvas</td>
+                <td>returns a dataURL image of the current canvas scaled to the number of inches passed (relative to width) @ 300dpi</td>
+              </tr>
+            </tbody></table>
+
+            <h2 id="event-triggers">Event Triggers</h2>
+
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th>Name</th><th>Description</th>
+                </tr>
+                <tr>
+                  <td>‘imageLoaded’</td>
+                  <td>the image has been loaded to memory, check parameter success to confirm</td>
+                </tr>
+                <tr>
+                  <td>‘imageLoading’</td>
+                  <td>the plugin has started loading the current image</td>
+                </tr>
+                <tr>
+                  <td>‘imageParsing’</td>
+                  <td>the image pixels are being parsed </td>
+                </tr>
+                <tr>
+                  <td>‘imageParsed’</td>
+                  <td>the image pixels have been parsed</td>
+                </tr>
+                <tr>
+                  <td>‘hiResProcessing’</td>
+                  <td>the hi res version of being built into a new dataURL image</td>
+                </tr>
+                <tr>
+                  <td>‘hiResProcessed’</td>
+                  <td>the hi res image version has been processed into a new dataURL image</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- /.row -->
+
+      </div><!-- /.container -->
+
+    </div><!-- /.section -->
+
+    <div class="container">
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p><a class="symbol twitter-link" target="_blank" href="http://www.twitter.com/theLucre">circletwitter</a>
+              <a class="symbol instagram-link" target="_blank" href="http://www.instagram.com/theLucre">circleinstagram</a>
+              <a class="symbol github-link" target="_blank" href="http://www.github.com/thelucre">circlegithubalt</a>
+              <a class="symbol linkedin-link" target="_blank" href="http://www.linkedin.com/in/ericmhoward">circlelinkedin</a>
+            </p>
+            <p>  
+              <span class="footer-madeby">Brought to you by <strong><a href="http://www.thelucre.com" target="_blank">The Lucre</a></strong></span>
+            </p>
+            
+          </div>
+        </div>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/jquery.instapixel.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-11185300-7', 'instapixel.org');
+      ga('send', 'pageview');
+
+    </script>
+    <!-- facebook hoohaw -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=196282690422571";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </body>
+</html>
